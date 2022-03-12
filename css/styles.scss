@@ -2,10 +2,61 @@
     margin: 0px;
     padding: 0px;
 }
+body{
+    font-family: 'Noto Serif', serif;
+    background-color: #141312;
+}
+// HEADER
+.header{
+    margin: 12.5rem 2rem 4rem 4rem;
+    position: relative;
+    width: 70rem;
+    height: 15rem;
+    background: linear-gradient(0deg,#000000,#1A1A1A,#343434);
+        :before{
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background: linear-gradient(45deg,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000);
+            background-size: 400%;
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            z-index: -1;
+            animation: neon 30s linear infinite;
+            filter: blur(5px);
+        }
+        @keyframes neon {
+            0%{
+                background-position: 0 0;
+            }
+            50%{
+                background-position: 400% 0;
+            }
+            100%{
+                background-position: 0 0;
+            }
+        }
+    
+    .navbar{
+        padding: 0%;
+        .btn{
+            border:none;
+        }
+    }
+    h1{
+        display: flex;
+        justify-content: center;
+        color: #D0D3D4;
+        padding-top: 1.5rem;
+    }
+    h3{
+        display: flex;
+        justify-content: center;
+        color: #D0D3D4;
+    }
+}
 .conocimientos{
     background-color: white;
-}
+}    
 
-h1{
-    font-family: 'Noto Serif', serif;
-}
