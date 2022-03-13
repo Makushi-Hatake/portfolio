@@ -6,4 +6,44 @@
 body {
   font-family: 'Noto Serif', serif;
 }
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: black;
+  height: 100vh;
+}
+
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#232526));
+  background: linear-gradient(#232526);
+  border-style: solid;
+  border-color: #CCFF00;
+  height: 200px;
+  width: 500px;
+}
+
+header .container h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+.nav {
+  background-color: #232526;
+}
 /*# sourceMappingURL=styles.css.map */

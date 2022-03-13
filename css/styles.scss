@@ -6,3 +6,27 @@ body{
     font-family: 'Noto Serif', serif;
 }
 // HEADER
+header{
+    display: flex;
+    align-items: center;
+    background: black;
+    height: 100vh;
+.container{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(#232526,);
+    border-style: solid;
+    border-color: #CCFF00;
+    height: 200px;
+    width: 500px;
+    h1{
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+    }
+}
+.nav{
+    background-color: #232526;
+   }
+
