@@ -4,29 +4,87 @@
 }
 body{
     font-family: 'Noto Serif', serif;
+    font-family: 'Orbitron', sans-serif;
 }
 // HEADER
 header{
-    display: flex;
-    align-items: center;
+    display: grid;
+    place-content: center;
+    text-align: center;
     background: black;
-    height: 100vh;
-.container{
-    display: flex;
-    justify-content: center;
-    background: linear-gradient(#232526,);
-    border-style: solid;
-    border-color: #CCFF00;
-    height: 200px;
-    width: 500px;
-    h1{
-        display: flex;
-        align-items: center;
+    min-height: 100vh;
+    .line-1{
+        font-size: 4rem;
+        position: relative;
+        width: max-content;
         color: white;
+        ::before,
+        ::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        }
+        ::before{
+            background-color: black;
+            animation: typewriter 3s steps(18) 1s forwards;
+        }
+        ::after{
+            width: 0.125em;
+            background: white;
+            animation: typewriter 3s steps(18) 1s forwards, blinks 750ms steps(18) infinite;
+        }
+        @keyframes typewriter {
+            to{ left: 100%; }
+        }
+        }
+        @keyframes blinks {
+            to{ background: transparent;}
+        }
+        .line-2{
+            color: white;
+        }
     }
-    }
-}
-.nav{
-    background-color: #232526;
-   }
+    
+        
 
+// SECCION CONOCIMIENTOS
+// .conocimientos{
+//     display: flex;
+//     align-items: center;
+//     background-color: #D5D8DC;
+//     height: 100vh;
+//     .conocimientos-icons{
+//         display: flex;
+//         justify-content: space-around;
+//         align-items: center;
+//         background-color: white;
+//         border-radius: 15px;
+//         height: 30rem;
+//     .htmlicon{
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         height: 15rem;
+//         width: 10rem;
+//         border-style: solid;
+//         border-color: #e34c26;
+//     }
+//     .fa-html5{
+//         color: #e34c26;
+//     }   
+//     .fa-css3-alt{
+//         color: #264de4;
+//     }
+//     .fa-js{
+//         color: yellow;
+//     }
+//     .fa-bootstrap{
+//         color: #6610f2;
+//     }
+//     .fa-git-alt{
+//         color: orangered;
+//     }
+// }
