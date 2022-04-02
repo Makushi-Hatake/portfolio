@@ -6,74 +6,73 @@
 body {
   font-family: 'Noto Serif', serif;
   font-family: 'Orbitron', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 header {
-  display: -ms-grid;
-  display: grid;
-  place-content: center;
-  text-align: center;
-  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   min-height: 100vh;
-}
-
-header .line-1 {
-  font-size: 4rem;
-  position: relative;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  background: black;
   color: white;
 }
 
-header .line-1 ::before,
-header .line-1 ::after {
+.blinker {
+  position: relative;
+}
+
+.blinker::before {
   content: "";
-  position: absolute;
   top: 0;
   right: 0;
-  bottom: 0;
-  left: 0;
+  font-size: 4rem;
+  height: 5rem;
+  position: absolute;
+  width: 2.5rem;
+  background-color: blue;
+  -webkit-animation: blinkCursor 0.5s step(3) infinite;
+          animation: blinkCursor 0.5s step(3) infinite;
 }
 
-header .line-1 ::before {
-  background-color: black;
-  -webkit-animation: typewriter 3s steps(18) 1s forwards;
-          animation: typewriter 3s steps(18) 1s forwards;
-}
-
-header .line-1 ::after {
-  width: 0.125em;
-  background: white;
-  -webkit-animation: typewriter 3s steps(18) 1s forwards, blinks 750ms steps(18) infinite;
-          animation: typewriter 3s steps(18) 1s forwards, blinks 750ms steps(18) infinite;
-}
-
-@-webkit-keyframes typewriter {
-  to {
-    left: 100%;
+@-webkit-keyframes blinkCursor {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
-@keyframes typewriter {
-  to {
-    left: 100%;
+@keyframes blinkCursor {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
-@-webkit-keyframes blinks {
-  to {
-    background: transparent;
-  }
+.line-1 {
+  position: relative;
+  font-size: 4rem;
 }
 
-@keyframes blinks {
-  to {
-    background: transparent;
-  }
-}
-
-header .line-2 {
-  color: white;
+.line-2 {
+  position: relative;
+  font-size: 4rem;
 }
 /*# sourceMappingURL=styles.css.map */

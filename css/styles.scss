@@ -5,49 +5,66 @@
 body{
     font-family: 'Noto Serif', serif;
     font-family: 'Orbitron', sans-serif;
+    box-sizing: border-box;
+
+    
 }
 // HEADER
 header{
-    display: grid;
-    place-content: center;
-    text-align: center;
-    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     min-height: 100vh;
-    .line-1{
-        font-size: 4rem;
+    background: black;
+    color: white;
+}
+    .blinker{
         position: relative;
-        width: max-content;
-        color: white;
-        ::before,
-        ::after {
+    }
+    .blinker::before{
         content: "";
-        position: absolute;
         top: 0;
         right: 0;
-        bottom: 0;
-        left: 0;
+        font-size: 4rem;
+        height: 5rem;
+        position: absolute;
+        width: 2.5rem;
+        background-color: blue;
+        animation: blinkCursor 0.5s step(3) infinite;
+    }
+    @keyframes blinkCursor {
+        0%{
+            opacity: 0;
         }
-        ::before{
-            background-color: black;
-            animation: typewriter 3s steps(18) 1s forwards;
+        50%{
+            opacity: 0.5;
         }
-        ::after{
-            width: 0.125em;
-            background: white;
-            animation: typewriter 3s steps(18) 1s forwards, blinks 750ms steps(18) infinite;
-        }
-        @keyframes typewriter {
-            to{ left: 100%; }
-        }
-        }
-        @keyframes blinks {
-            to{ background: transparent;}
-        }
-        .line-2{
-            color: white;
+        100%{
+            opacity: 1;
         }
     }
+    .line-1{
+        position: relative;
+        font-size: 4rem;
+    }
+    .line-2{
+        
+       position: relative;
+       font-size: 4rem;
+    }
+
+
+
+ 
+     
     
+
+
+
+
+
+
+
         
 
 // SECCION CONOCIMIENTOS
