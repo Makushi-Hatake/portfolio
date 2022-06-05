@@ -77,16 +77,22 @@
     </section>
     <!-- Seccion Contacto -->
     <section class="contacto" id="contact">
+        <form id="enviar-mail">
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Dirección de Email</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <input type="email" class="form-control" id="email" placeholder="name@example.com" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="">
         </div>
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Comentarios</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" id="textarea" rows="3" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover"></textarea>
+            <button id="enviarComm" type="submit">Enviar</button>
+            <button id="resetForm">Resetear formulario</button>
         </div>
+        <div class="spinner-border text-warning" role="status" id="spinner"></div>
+    </form>
     </section>
-    <script src="/js/main.js"></script>
+    <!-- <script src="/js/main.js"></script> -->
+    <script src="/js/comms.js"></script>
 </body>
 
 
